@@ -8,6 +8,8 @@ from django.db.models import Count
 from .forms import TblStudentsForm
 from django.shortcuts import render, redirect, get_object_or_404
 from django.db.models import Q
+from django.shortcuts import render
+from django.db.models import OuterRef, Subquery, Max
 
 def classroom_student_list(request, class_id):
     classroom = get_object_or_404(Classroom, class_id=class_id)
@@ -32,29 +34,6 @@ def classroom_student_list(request, class_id):
         'total_students': total_students,
         'class_id': class_id
     })
-
-
-def data(request):
-    # Chuyển đổi QuerySet thành danh sách các từ điển để dễ đọc
-    t3 = list(TblStudents.objects.values())
-
-    # Lọc các bản ghi có name bắt đầu bằng "Beatles"
-    t4 = list(TblStudents.objects.filter(name__startswith="Beatles").values())
-
-    # Tìm kiếm chính xác
-    t5 = list(TblStudents.objects.filter(name="Phong Vu").values())
-
-    # Tìm kiếm một phần
-    t6 = list(TblStudents.objects.filter(name__contains="N").values())
-
-
-    data = {
-        "all_students": t3,
-        "starts_with_beatles": t4,
-        "exact_name_phong_vu": t5,
-        "contains_n": t6,
-    }
-    return JsonResponse(data)
 
 def classroom_list(request):
     classrooms = Classroom.objects.all()
@@ -115,8 +94,7 @@ def classroom_student_list(request, classroom_id):
         'total_students': total_students
     })
 
-from django.shortcuts import render
-from django.db.models import OuterRef, Subquery, Max
+
 
 def student_list(request):
     # Lấy tất cả sinh viên

@@ -33,7 +33,5 @@ urlpatterns = [
     path('classroom/<int:classroom_id>/', dashboardController.classroom_student_list, name='classroom_list_attendance'),
     path('classroom_list_attendance', dashboardController.classroom_list_attendance, name='classroom_list_attendance'),
     path('student_list', dashboardController.student_list, name='student_list'),
-   
-
 ]
 

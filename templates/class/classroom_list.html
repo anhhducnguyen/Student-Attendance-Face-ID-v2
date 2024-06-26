@@ -4,27 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin Dashboard</title>
-  <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'assets/css/Admin/admin/assets/plugins/fontawesome-free/css/all.min.css' %}">
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'assets/css/Admin/admin/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'assets/css/Admin/admin/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'assets/css/Admin/admin/assets/plugins/jqvmap/jqvmap.min.css' %}">
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'assets/css/Admin/admin/assets/css/adminlte.min.css' %}">
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'assets/css/Admin/admin/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css' %}">
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'assets/css/Admin/admin/assets/plugins/daterangepicker/daterangepicker.css' %}">
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'assets/css/Admin/admin/assets/plugins/summernote/summernote-bs4.min.css' %}">
-
   {% load static %}
   <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
   {% load static %}
@@ -54,14 +34,10 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-  <!-- Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <img src="{%static 'assets/images/AdminLTELogo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Teacher</span>
     </a>
-
     <!-- Sidebar -->
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
@@ -92,20 +68,19 @@
               </p>
             </a>
           </li>
-          <li style="margin-top: 300px;" class="nav-item menu-open">
+          <li class="nav-item menu-open">
             <a href="/signout" class="nav-link ">
-            <i class="fas fa-sign-out-alt"></i>
+              <i class="nav-icon fas fa-book"></i>
               <p>
-                SignOut
+                Đăng xuất
               </p>
             </a>
           </li>
+          
         </ul>
       </nav>
-      <!-- /.sidebar-menu -->
     </div>
     
-    <!-- /.sidebar -->
   </aside>
 
   <!-- Content -->
@@ -119,29 +94,11 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">User</li> -->
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -169,8 +126,6 @@
             </tbody>
         </table>
     </div>
-
-
       </div>
     </section>
   </div>
