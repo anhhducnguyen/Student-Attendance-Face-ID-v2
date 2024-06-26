@@ -25,6 +25,9 @@ import base64
 import numpy as np
 import firebase_admin
 from firebase_admin import credentials, storage
+import pandas as pd
+from django.http import HttpResponse
+from .models import TblStudents, Attendance
 
 def home(request):
     return render(request, "authentication/index.html")
@@ -35,18 +38,14 @@ def classroom(request):
 def regisImg(request):
     return render(request, "admin/registerImage.html")
 
+def userthem(request):
+    return render(request, "admin/nguoidung.php")
 
 def dashboard(request):
     # Get the total number of students
     total_students = TblStudents.objects.count()
     total_class = Classroom.objects.count()
     return render(request, 'admin/index.php', {'total_students': total_students, 'total_class': total_class})
-    # return render(request, "admin/index.php")
-
-def userthem(request):
-    return render(request, "admin/nguoidung.php")
-
-
 
 def cappicture(request, student_id, name):
     if request.method == 'GET':
@@ -57,21 +56,7 @@ def cappicture(request, student_id, name):
         student = TblStudents.objects.get(student_id=student_id)
         # Lấy classroom_id từ thông tin sinh viên
         classroom_id = student.classroom.class_id
-        # # Thêm thông báo đăng ký thành công
-        # messages.success(request, 'Đăng ký ảnh thành công!')
-        # Chuyển hướng đến trang classroom_detail với classroom_id
         return redirect(f'/classroom/{classroom_id}/')
-
-
-
-    
-
-    
-
-
-
-    
-
 
 # register logout login
 def signup(request):
@@ -156,9 +141,6 @@ def signout(request):
     messages.success(request, "Logged Out Successfully!!")
     return redirect('home')
 
-import pandas as pd
-from django.http import HttpResponse
-from .models import TblStudents, Attendance
 
 def export_to_excel(request):
     students = TblStudents.objects.all()

@@ -12,24 +12,6 @@ class AttendanceInline(admin.TabularInline):
     extra = 1
     raw_id_fields = ('session', 'student')
 
-# class UserAdmin(BaseUserAdmin):
-#     actions = ['add_to_students_group']
-#     change_form_template = "user/button_form.html"
-#     def add_to_students_group(self, request, queryset):
-#         try:
-#             students_group = Group.objects.get(name='students')
-#         except Group.DoesNotExist:
-#             self.message_user(request, "Group 'students' does not exist.", messages.ERROR)
-#             return
-
-#         for user in queryset:
-#             user.groups.add(students_group)
-#         self.message_user(request, "Selected users have been added to the 'students' group.", messages.SUCCESS)
-#     add_to_students_group.short_description = "Add selected users to the 'students' group"
-
-# admin.site.unregister(User)
-# admin.site.register(User, UserAdmin)
-
 class UserAdmin(BaseUserAdmin):
     actions = ['add_to_students_group']
     change_list_template = "user/button_form.html"

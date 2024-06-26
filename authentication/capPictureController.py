@@ -40,7 +40,6 @@ def augment_images(images):
         augmented_images.append(rotated_image)
     return augmented_images
 
-
 def upload_to_firebase(image, folder, image_name):
     bucket = storage.bucket()
     blob = bucket.blob(f'{folder}/{image_name}')
