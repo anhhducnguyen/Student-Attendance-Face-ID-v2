@@ -5,7 +5,6 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.utils.encoding import force_str, force_bytes
 from django.contrib.auth import authenticate, login, logout
-
 from authentication.capPictureController import capture_images
 from .tokens import generate_token
 import subprocess

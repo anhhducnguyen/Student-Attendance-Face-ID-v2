@@ -24,44 +24,10 @@
   <link rel="stylesheet" href="{% static 'assets/css/Admin/admin/assets/plugins/daterangepicker/daterangepicker.css' %}">
   {% load static %}
   <link rel="stylesheet" href="{% static 'assets/css/Admin/admin/assets/plugins/summernote/summernote-bs4.min.css' %}">
-
-
-  <!-- <link rel="stylesheet" href="assets/css/Admin/admin/assets/plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="assets/css/Admin/admin/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <link rel="stylesheet" href="assets/css/Admin/admin/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/Admin/admin/assets/plugins/jqvmap/jqvmap.min.css">
-  <link rel="stylesheet" href="assets/css/Admin/admin/assets/css/adminlte.min.css">
-  <link rel="stylesheet" href="assets/css/Admin/admin/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" href="assets/css/Admin/admin/assets/plugins/daterangepicker/daterangepicker.css">
-  <link rel="stylesheet" href="assets/css/Admin/admin/assets/plugins/summernote/summernote-bs4.min.css"> -->
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-  <!-- Navbar -->
-  <!-- <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Home</a>
-      </li>
-    </ul>
-
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <p class="nav-link">ADMIN</p>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-    </ul>
-  </nav> -->
-
-  <!-- Sidebar Container -->
+    <!-- Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
@@ -73,12 +39,7 @@
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <!-- <div class="image">
-          <img  src="../assets/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
-        </div> -->
-        <!-- <div class="info">
-          <a href="#" class="d-block">ADMIN</a>
-        </div> -->
+      
       </div>
 
       <!-- Sidebar Menu -->
@@ -251,23 +212,5 @@
     </div>
   </footer>
 </div>
-<!-- ./wrapper -->
-
-<!-- <script src="../assets/plugins/jquery/jquery.min.js"></script>
-<script src="../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
-<script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/plugins/chart.js/Chart.min.js"></script>
-<script src="../assets/plugins/sparklines/sparkline.js"></script>
-<script src="../assets/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="../assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<script src="../assets/plugins/jquery-knob/jquery.knob.min.js"></script>
-<script src="../assets/plugins/moment/moment.min.js"></script>
-<script src="../assets/plugins/daterangepicker/daterangepicker.js"></script>
-<script src="../assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<script src="../assets/plugins/summernote/summernote-bs4.min.js"></script>
-<script src="../assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<script src="../assets/js/adminlte.js"></script>
-<script src="../assets/js/demo.js"></script>
-<script src="../assets/js/pages/dashboard.js"></script> -->
 </body>
 </html>

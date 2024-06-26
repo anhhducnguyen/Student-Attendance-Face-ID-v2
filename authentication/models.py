@@ -18,7 +18,7 @@ class TblStudents(models.Model):
     iCap = models.BooleanField(default=False)
     date_birth = models.DateField()
     password = models.CharField(max_length=128, default=make_password('abc@123'))
-    classrooms = models.ManyToManyField(Classroom, related_name='students')
+    classrooms = models.ManyToManyField(Classroom, related_name='students', null = True)
 
     def __str__(self):
         return self.name
